@@ -137,7 +137,7 @@ public class WorkbenchServlet extends AbstractServlet {
 			if (e.getCause() instanceof RemoteShaclSailValidationException) {
 				Model model = ((RemoteShaclSailValidationException) e.getCause()).validationReportAsModel();
 
-				resp.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+				resp.setStatus(HttpServletResponse.SC_CONFLICT);
 				resp.setContentType(TEXT_PLAIN);
 				PrintWriter writer = resp.getWriter();
 

@@ -1063,7 +1063,7 @@ public class SPARQLProtocolSession implements HttpClientDependent, AutoCloseable
 	}
 
 	private boolean exceptionIs(HttpResponse response, String exceptionName) {
-		Header[] headers = response.getHeaders("X-Eclipse-RDF4J-Exception");
+		Header[] headers = response.getHeaders("Eclipse-RDF4J-Exception");
 		if (headers.length == 0) {
 			return false;
 		}
